@@ -1,0 +1,377 @@
+//AurenPC Friendship Timer
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#Friendship","GLOBAL", 0)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1) 
+SetGlobalTimer("FriendshipT","GLOBAL",FOUR_DAYS)   
+END
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#Friendship","GLOBAL", 1)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1) 
+SetGlobalTimer("FriendshipT","GLOBAL",FOUR_DAYS)  
+END
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#Friendship","GLOBAL", 2)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1) 
+SetGlobalTimer("FriendshipT","GLOBAL",FOUR_DAYS)  
+END
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#Friendship","GLOBAL", 3)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1) 
+SetGlobalTimer("FriendshipT","GLOBAL",FOUR_DAYS)  
+END 
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#Friendship","GLOBAL", 4)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1) 
+SetGlobalTimer("FriendshipT","GLOBAL",FOUR_DAYS)  
+END 
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#Friendship","GLOBAL", 5)
+Global("AsylumPlot","GLOBAL", 55)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1) 
+SetGlobalTimer("FriendshipT","GLOBAL",FOUR_DAYS)  
+END
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#Friendship","GLOBAL", 6)
+Global("AsylumPlot","GLOBAL", 55)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1) 
+SetGlobalTimer("FriendshipT","GLOBAL",FOUR_DAYS)  
+END
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#Friendship","GLOBAL", 7)
+Global("AsylumPlot","GLOBAL", 55)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1) 
+SetGlobalTimer("FriendshipT","GLOBAL",FOUR_DAYS)  
+END
+
+//AurenNaliaLT Timer
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 0)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+THEN
+RESPONSE #100
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",ONE_DAY)
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 1)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",ONE_DAY)  
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 2)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 3)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 4)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 5)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 6)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AureM1") 
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 7)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 8)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AureM1") 
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 9)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 10)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AureM1") 
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 11)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AureM1") 
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 12)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AureM1") 
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 13)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 14)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100 
+PlaySong(0)
+PlaySound("K#AureM2") 
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 15)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("NaliaKeepPlot","GLOBAL",1) 
+Global("PCKeepOwner","GLOBAL",1)
+THEN
+RESPONSE #100 
+PlaySong(0)
+PlaySound("K#AureM1") 
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#BanterO","GLOBAL", 15)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+Global("PCKeepOwner","GLOBAL",0)
+Global("NaliaKeepPlot","GLOBAL",1) 
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AureM1") 
+Interact("Nalia") 
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+// Valinor/Arianna
+
+IF
+InParty(Myself)
+GlobalGT("K#BanterO","GLOBAL",11)
+Global("AriannaValinorExist","GLOBAL",0) 
+!Global("Chapter","GLOBAL",4) 
+!Global("Chapter","GLOBAL",5) 
+!Global("Chapter","GLOBAL",7) 
+!AreaCheck("AR1900")
+!AreaCheck("AR1100")
+!AreaCheck("AR1400")
+!AreaCheck("AR1404")
+!AreaCheck("AR2500")
+!AreaCheck("AR2600") 
+AreaType(OUTDOOR) 
+!Exists("VALINOR")
+!Exists("ARIANNA") 
+THEN
+RESPONSE #100
+DisplayStringHead(Player1,@2)
+SetGlobal("AriannaValinorExist","GLOBAL",1)
+CreateCreatureObjectOffScreen("ARIANNA",Myself,0,0,0)
+CreateCreatureObjectOffScreen("VALINOR",Myself,0,0,0)
+END
+
+// Reputation
+
+IF ReputationLT(Player1,3)
+Global("K#Repxcomplain","LOCALS",0)
+THEN
+RESPONSE #100
+StartDialogNoSet(Player1)
+END
+
+

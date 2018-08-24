@@ -1,0 +1,24 @@
+IF
+Global("ValinorAriannaTalk","GLOBAL",0) 
+See("K#Auren")
+InParty("K#Auren")
+THEN
+RESPONSE #100
+Dialogue("K#Auren")
+END
+
+IF
+Global("ValinorAriannaTalk","GLOBAL",0)
+!See("K#Auren")
+InParty("K#Auren")
+THEN
+RESPONSE #100
+MoveToObject("K#Auren")
+END
+
+IF
+!InParty("K#Auren")
+THEN
+RESPONSE #100
+EscapeArea()
+END

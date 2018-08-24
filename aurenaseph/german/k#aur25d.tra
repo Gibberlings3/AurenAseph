@@ -1,0 +1,13 @@
+@0    = ~Es ist schön, Euch wieder zu sehen, mein Freund. Aber... wo sind wir?~ [K#AurXB7] ~Es ist schön, Euch wieder zu sehen, meine Freundin. Aber... wo sind wir?~ [K#AurXB7]
+@1    = ~Das ist jetzt nicht wichtig, Auren. Ich brauche Euch. Die Zeit der Prohezeiung ist gekommen, und ich brauche jede Hilfe, die ich bekommen kann.~
+@2    = ~Sehr erfreut, Euch wieder zu sehen, Auren. Ich brauche Eure Hilfe.~
+@3    = ~Ich bin nicht Euer Freund, Auren, aber ich brauche Eure Hilfe.~ ~Ich bin nicht Eure Freundin, Auren, aber ich brauche Eure Hilfe.~
+@4    = ~Die Prophezeiung? Jetzt schon? (seufz) Ich hätte nicht gedacht, dass sie schon so bald kommen würde. Aber das macht nichts, ich bin für Euch da, <CHARNAME>.~ [K#AurXB8]
+@5    = ~Danke, Auren. Bitte schliesst Euch mir wieder an.~
+@6    = ~Eigentlich brauche ich Euch doch nicht. Wartet hier, bis ich es tue.~
+@7    = ~Das Reisen mit Euch habe ich vermissst. Schön, wieder zurück zu sein.~ [K#AurXB9]
+@8    = ~Sehr schön. Aber braucht nicht zu lange.~ [K#AurXC0]
+@9    = ~Es wäre mir eine Freude, Euch zu helfen, <CHARNAME>. Was kann ich für Euch tun?~ [K#AurXC1]
+@10   = ~Mir gefällt Euer Ton nicht, aber was braucht Ihr von mir?~ [K#AurXC2]
+@11   = ~Bitte, schliesst Euch mir an, Auren~
+@12   = ~Ihr seid zurück! Sollen wir unsere Reisen zusammen fortsetzen?~ [K#AurXC3]

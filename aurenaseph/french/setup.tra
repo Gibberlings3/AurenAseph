@@ -1,0 +1,171 @@
+@0    = ~Auren Aseph pour BG2:ToB~
+@1    = ~Auren~
+@2    = ~Rester plantés là va juste nous valoir d'être tués.~ [K#Aure25]
+@3    = ~Tu vois, je commence à me dire qu'unir nos forces valait vraiment le coup.~ [K#Aure22]
+@4    = ~Euh... ne descends pas le long de cette voie-là. Elle est mauvaise.~ [K#Aure39]
+@5    = ~Je ne sais pas trop pour qui tu te prends, mais tu ne peux pas continuer comme ça. Rectifie tes façons de faire ou je me tire d'ici.~ [K#Aure35]
+@6    = ~Je t'avais prévenu. Je me tire d'ici.~ [K#Aure13] ~Je t'avais prévenue. Je me tire d'ici.~ [K#Aure13]
+@7    = ~Euh... c'est vraiment ce que tu veux ?~ [K#Aure24]
+@8    = ~Je ne le dis généralement que quand je le pense vraiment mais... j'ai besoin de repos !~ [K#Aure38]
+@9    = ~Euh... on pourrait *pas* éviter de rester là comme une bande d'abrutis ?~ [K#Aure12]
+@10   = ~Dis 'adieu', enfoiré !~ [K#Aure11]
+@11   = ~Il est temps de mourir !~ [K#Aure08]
+@12   = ~Ça n'a rien de personnel... euh, en fait, si.~ [K#Aure09]
+@13   = ~Adieu !~ [K#Aure10]
+@14   = ~Hé !~ [K#Aure17]
+@15   = ~C'était... marrant... le temps que ça a duré...~ [K#Aure20]
+@16   = ~Aide-moi, s'il te plaît.~ [K#Aure36]
+@17   = ~Je préfère largement les vastes espaces ouverts de la forêt aux foules urbaines.~ [K#Aure21]
+@18   = ~Il y a énormément de choses à voir dans une ville... du bon comme du mauvais.~ [K#Aure14]
+@19   = ~Ce n'est peut-être pas le paradis ici, mais il existe des endroits plus profonds et plus sombres.~ [K#Aure19]
+@20   = ~La lumière du jour est chaleureuse aujourd'hui.~ [K#Aure18]
+@21   = ~Prends garde aux ténèbres, car il y a des personnes bien cachées qui nous veulent du mal... allumons un feu de camp et chantons des chansons, d'accord ?~ [K#Aure26]
+@22   = ~Ouais ?~ [K#Aure27]
+@23   = ~De quoi as-tu besoin ?~ [K#Aure28]
+@24   = ~Qu'est-ce qu'il y a ?~ [K#Aure29]
+@25   = ~Besoin que quelque chose soit fait ?~ [K#Aure30]
+@26   = ~Oui ?~ [K#Aure31]
+@27   = ~J'écoute.~ [K#Aure32]
+@28   = ~Compris.~ [K#Aure45]
+@29   = ~Bien sûr.~ [K#Aure02]
+@30   = ~Je m'en charge.~ [K#Aure03]
+@31   = ~Parce que *tu* ne peux pas le faire ?~ [K#Aure04]
+@32   = ~Ce n'est rien.~ [K#Aure05]
+@33   = ~Aucun problème pour moi.~ [K#Aure06]
+@34   = ~J'y vais, j'y vais !~ [K#Aure07]
+@35   = ~Je suis prête.~ [K#Aure34]
+@36   = ~Je suis la femme de la situation.~ [K#Aure33]
+@37   = ~Ouais !~ [K#Aure16]
+@38   = ~Rah... je vaux mieux que ça !~ [K#Aure15]
+@39   = ~Inefficace ? Il doit y avoir un meilleur moyen.~ [K#Aure37]
+@40   = ~Désolée, je suis déjà trop chargée.~ [K#Aure23]
+@41   = ~Quand vous l'interrogez sur son passé, AUREN garde le silence avant de finir par répondre qu'elle est née à Bérégost, non loin de chez vous. Fille unique d'un marchand de classe moyenne et de sa femme, Auren s'est lancée dans l'art du maniement de l'épée à quatorze ans à peine. Elle n'a beau avoir que vingt ans à présent, vous devinez d'après la façon dont elle se tient qu'il s'agit d'une guerrière expérimentée qui connaît bien Féérune. Vous vous demandez où exactement elle a appris à combattre si bien et pourquoi malgré son jeune âge elle a tant voyagé.~
+@42   = ~Valinor~
+@43   = ~Arianna~
+@44   = ~Epée longue~
+@45   = ~Dadrek~
+@46   = ~Si vous lisez cette description dans le jeu, réinstallez le mod ou essayez d'envoyer un mail à theacefes (bohdi2185@msn.com) s'il vous plaît.~
+@47   = ~Appelée ainsi en mémoire du précédent mentor et chef de son ancien groupe d'aventuriers, Auren prétend que cette épée n'a rien d'extraordinaire. Elle l'a achetée à rien de moins que Taerom Grondemarteau, le célèbre forgeron de Bérégost, avant de partir en quête d'aventure à quatorze ans. Cette épée semble bel et bien ordinaire mais Auren dit que, parfois, elle se sent plus forte et plus confiante quand elle la manie.~
+@48   = ~Rester plantés là va juste nous valoir d'être tués.~ [K#AurX25]
+@49   = ~Tu vois, je commence à me dire qu'unir nos forces valait vraiment le coup.~ [K#AurX22]
+@50   = ~Euh... ne descends pas le long de cette voie-là. Elle est mauvaise.~ [K#AurX39]
+@51   = ~Je ne sais pas trop pour qui tu te prends, mais tu ne peux pas continuer comme ça. Rectifie tes façons de faire ou je me tire d'ici.~ [K#AurX35]
+@52   = ~Je t'avais prévenu. Je me tire d'ici.~ [K#AurX13] ~Je t'avais prévenue. Je me tire d'ici.~ [K#AurX13]
+@53   = ~Euh... c'est vraiment ce que tu veux ?~ [K#AurX24]
+@54   = ~Je ne le dis généralement que quand je le pense vraiment mais... j'ai besoin de repos !~ [K#AurX38]
+@55   = ~Euh... on pourrait *pas* éviter de rester là comme une bande d'abrutis ?~ [K#AurX12]
+@56   = ~Dis 'adieu', enfoiré !~ [K#AurX11]
+@57   = ~Il est temps de mourir !~ [K#AurX08]
+@58   = ~Ça n'a rien de personnel... euh, en fait, si.~ [K#AurX09]
+@59   = ~Adieu !~ [K#AurX10]
+@60   = ~Hé !~ [K#AurX17]
+@61   = ~C'était... marrant... le temps que ça a duré...~ [K#AurX20]
+@62   = ~Aide-moi, s'il te plaît.~ [K#AurX36]
+@63   = ~Je préfère largement les vastes espaces ouverts de la forêt aux foules urbaines.~ [K#AurX21]
+@64   = ~Il y a énormément de choses à voir dans une ville... du bon comme du mauvais.~ [K#AurX14]
+@65   = ~Ce n'est peut-être pas le paradis ici, mais il existe des endroits plus profonds et plus sombres.~ [K#AurX19]
+@66   = ~La lumière du jour est chaleureuse aujourd'hui.~ [K#AurX18]
+@67   = ~Prends garde aux ténèbres, car il y a des personnes bien cachées qui nous veulent du mal... allumons un feu de camp et chantons des chansons, d'accord ?~ [K#AurX26]
+@68   = ~Ouais ?~ [K#AurX27]
+@69   = ~De quoi as-tu besoin ?~ [K#AurX28]
+@70   = ~Qu'est-ce qu'il y a ?~ [K#AurX29]
+@71   = ~Besoin que quelque chose soit fait ?~ [K#AurX30]
+@72   = ~Oui ?~ [K#AurX31]
+@73   = ~J'écoute.~ [K#AurX32]
+@74   = ~Compris.~ [K#AurX45]
+@75   = ~Bien sûr.~ [K#AurX02]
+@76   = ~Je m'en charge.~ [K#AurX03]
+@77   = ~Parce que *tu* ne peux pas le faire ?~ [K#AurX04]
+@78   = ~Ce n'est rien.~ [K#AurX05]
+@79   = ~Aucun problème pour moi.~ [K#AurX06]
+@80   = ~J'y vais, j'y vais !~ [K#AurX07]
+@81   = ~Je suis prête.~ [K#AurX34]
+@82   = ~Je suis la femme de la situation.~ [K#AurX33]
+@83   = ~Ouais !~ [K#AurX16]
+@84   = ~Rah... je vaux mieux que ça !~ [K#AurX15]
+@85   = ~Inefficace ? Il doit y avoir un meilleur moyen.~ [K#AurX37]
+@86   = ~Désolée, je suis déjà trop chargée.~ [K#AurX23]
+@87   = ~Ta dernière heure est arrivée !~
+@88   = ~Crève, pourriture !~
+@89   = ~Assez ! On termine ça maintenant !~
+@90   = ~Argh !~
+@91   = ~Non ! Je ne perdrai pas !~
+
+@93   = ~Je t'avais prévenue ! Maintenant il faut en payer le prix !~
+@94   = ~Crevez tous !~
+@95   = ~Tu oses me blesser ?~
+@96   = ~Mercenaire~
+
+@103  = ~Après l'incident survenu dans le plan de Bhaal, Auren prit la route des terres qu'elle avait rêvé de parcourir toute sa vie : les étendues gelées de Val-de-bise. Ces terres l'avaient attirée pendant des années et, dès que l'opportunité de s'y aventurer apparut, Auren la saisit avidement. Accueillie chaleureusement comme une héroïne de Féérune, Auren fut prompte à se faire des amis proches et des alliés dans le Nord. Elle finit par former son propre groupe d'aventuriers et les mena dans un noble et périlleux voyage d'un bout à l'autre de Val-de-bise, dans l'intention de libérer la région de certains de ses maux les plus purulents - principalement les chaînes de bandits qui attaquaient les marchands itinérants. Après plusieurs années à parcourir Val-de-bise, Auren s'en retourna à Bérégost et, de manière assez inattendue, devint l'apprentie de Taerom Grondemarteau qui lui céda son établissement après qu'il eut pris sa retraite. Depuis ce jour, on entend de nombreux aventuriers dans tout Féérune se vanter de la dernière arme qu'Auren leur a forgée. Les gens lui demandent constamment pourquoi elle ne s'est jamais mariée, ce à quoi elle répond systématiquement par un grand sourire taquin, "j'imagine que je n'ai jamais trouvé la bonne fille".~
+@104  = ~Après l'incident survenu dans le plan de Bhaal, Auren ne s'attarda pas longtemps à Téthyr. Nalia et elle se lancèrent dans un vaste périple dans tout Féérune. Elles s'arrêtaient à peu près dans chaque ville et chaque cité qui croisait leur route et, dans chacun des endroits qu'elles visitaient, Auren et Nalia offraient leurs services aux citoyens en tant que guerrière et guérisseuse. Elles donnaient une grande partie de leur argent aux plus défavorisés et combattaient tout ce qui tourmentait alors les villes et les cités. Nul ne sait à combien de villes elles vinrent en aide, mais une chose est sûre : leur amour ne s'éteignit jamais. Les deux femmes demeurèrent aussi proches l'une de l'autre que le jour où elles se déclarèrent leur amour pour la première fois. Les bardes chantaient des chansons à leur sujet dans les grandes salles et Auren Aseph de Bérégost obtint finalement ce à quoi elle aspirait : une place dans l'histoire. Tout Féérune la connaissait, elle et ses bonnes actions, et elle savait que Féérune ne l'oublierait jamais.~
+@105  = ~L'habitude de Nalia de donner aux plus défavorisés se transforma en réelle passion dès qu'Auren l'eut conduite à Eauprofonde durant leurs voyages ensemble. Grâce à sa fortune et à son influence, Nalia persuada la noblesse d'Eauprofonde de lui porter assistance dans sa cause. Elle demeura aux côtés d'Auren pendant leur vaste périple dans tout Féérune et quand leur voyage prit fin, elles s'installèrent toutes deux dans le château de Nalia à Amn, dont celle-ci avait hérité. Elle usa de son pouvoir de noble et d'héroïne de Féérune pour repousser une bonne fois pour toutes les Roenal et présida le Conseil des Six d'Amn. Son amour pour Auren ne fit que se renforcer au fil du temps et elles vécurent toutes deux une vie de richesse, de joie et de farces, grâce à Auren.~
+@106  = ~Portrait 1 (Neverwinter Nights Vault)~
+@107  = ~Portrait alternatif pour Auren~
+@108  = ~Veuillez installer Auren Aseph avant d'essayer d'installer un portrait alternatif~
+@109  = ~Portrait 2 (Neverwinter Nights)~
+
+
+// WeiDU prompts
+@-1000= "Le mod %TP2_FILE_NAME% contient"
+@-1001= "composants optionnels distincts.
+Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
+au niveau general plutot que de repondre aux questions pour chacun.
+"
+@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
+Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "
+@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
+Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
+
+@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
+@-1005= "a"
+
+@-1006= "Installer le composant ["
+@-1007= "] ?
+[R]einstaller, co[N]server, s[U]pprimer ou [Q]uitter ? "
+@-1008= "] ?
+[I]nstaller, [N]e pas installer ou [Q]uitter ? "
+
+@-1009= "Entrez une partie du nom du module : "
+
+@-1010= "Reinstallation du composant ["
+@-1011= "] "
+@-1012= "Reinstallation dans la langue"
+
+@-1013= "Suppression de l'ancienne installation de ["
+@-1014= "] au prealable..."
+@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
+
+@-1016= "Installation en cours"
+@-1017= "ERREUR pendant l'installation de ["
+@-1018= "], retour a l'etat anterieur"
+@-1019= "INSTALLATION REUSSIE"
+@-1020= "Saute"
+@-1021= "Suppression de ["
+@-1022= "] (composant #"
+@-1023= ")"
+@-1024= "SUPPRESSION REUSSIE DE ["
+
+@-1025= "] ?
+[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
+@-1026= "] ?
+[N]e pas installer, [Q]uitter ou choisir un parmi :"
+@-1027= " (installe actuellement)"
+
+@-1028= "Souhaitez-vous afficher les composants de ["
+@-1029= "] ?
+[Y]Oui, [N]on ? "
+
+@-1030= "] ?
+choisir un parmi :"
+@-1031= "] ?
+[R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
+@-1032= "INSTALLATION ECHOUEE A CAUSE D'ERREURS"
+@-1033= "INSTALLATION AVEC DES ALERTES"
+@-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
+@-1035= "Dans la langue"
+
+@-1036= "Saute le GROUPE ["
+@-1037= "] pour cause d'absence des pre-requis."
+
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :" 

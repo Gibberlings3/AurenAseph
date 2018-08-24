@@ -1,0 +1,305 @@
+// New ToB Talks for AurenNalia
+
+// If Auren and Nalia Got Together in SoA but didn't complete it
+
+IF
+  Global("K#AurenNaliaDecision","GLOBAL",0)
+  GlobalGT("K#BanterO","GLOBAL",11)
+  GlobalLT("K#BanterO","GLOBAL",15)
+THEN
+    RESPONSE #100
+             SetGlobal("K#AurenNaliaDecision","GLOBAL",1)
+             SetGlobal("K#ToBPreBanterO","GLOBAL",1) SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+// If Auren and Nalia completed Romance in SoA
+
+IF
+  Global("K#AurenNaliaDecision","GLOBAL",0)
+  GlobalGT("K#BanterO","GLOBAL",14)
+THEN
+    RESPONSE #100
+             SetGlobal("K#AurenNaliaDecision","GLOBAL",1) 
+             SetGlobal("K#ToBBanterO","GLOBAL",1) SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+
+
+// ToB Auren Nalia Talks If SoA Not Finished
+
+
+IF
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#TOBPreBanterO","GLOBAL", 1)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AurXM6")
+Interact("Nalia")
+SetGlobalTimer("ANBanterT","GLOBAL",ONE_DAY)
+END
+
+// ToB Auren Nalia Talks If SoA Finished
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#TOBBanterO","GLOBAL", 1)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AurXM6")
+Interact("Nalia")
+SetGlobalTimer("ANBanterT","GLOBAL",TWO_DAYS) 
+END
+
+IF
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#TOBBanterO","GLOBAL", 2)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AurXM6")
+Interact("Nalia")
+SetGlobaltimer("ANBanterT","GLOBAL", TWO_DAYS)
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#TOBBanterO","GLOBAL", 3)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AurXM6")
+Interact("Nalia")
+SetGlobaltimer("ANBanterT","GLOBAL", TWO_DAYS)
+END
+
+IF 
+InParty("K#Auren")
+InParty("Nalia")
+!ActuallyInCombat()
+Global("K#TOBBanterO","GLOBAL", 4)
+!GlobalTimerNotExpired("ANBanterT","GLOBAL")
+THEN
+RESPONSE #100
+PlaySong(0)
+PlaySound("K#AurXM6")
+Interact("Nalia")
+SetGlobaltimer("ANBanterT","GLOBAL", TWO_DAYS)
+END
+
+// ToB PCAuren Talks
+
+// If PC and Auren Not Friends
+
+IF
+  Global("K#AurenPCJustMet","GLOBAL",0)
+  GlobalLT("K#Friendship","GLOBAL",2)
+  Global("K#AurenToBTimerSet1","GLOBAL",0)
+THEN
+    RESPONSE #100
+             SetGlobal("K#AurenPCJustMet","GLOBAL",1)
+             SetGlobal("K#ToBPCAurenNo","GLOBAL",1) SetGlobalTimer("FriendshipTN","GLOBAL",TWO_DAYS)
+             SetGlobal("K#AurenToBTimerSet1","GLOBAL",1)
+END
+
+// If PC and Auren are Friends
+
+IF
+Global("K#AurenPCFriends","GLOBAL",0)
+GlobalGT("K#Friendship","GLOBAL",1)
+Global("K#AurenToBTimerSet1","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("K#AurenPCToBFriends","GLOBAL",1)
+SetGlobal("K#ToBPCAuren","GLOBAL",1)
+SetGlobalTimer("FriendshipT","GLOBAL",TWO_DAYS)
+SetGlobal("K#AurenToBTimerSet1","GLOBAL",1)
+END
+
+
+// PCAuren Talks If They Are Not Friends
+
+IF
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#ToBPCAurenNo","GLOBAL", 1)
+!GlobalTimerNotExpired("FriendshipTN","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1)
+SetGlobalTimer("FriendshipTN","GLOBAL",FOUR_DAYS)
+END
+
+// PCAuren Talks If They Are Friends
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#ToBPCAuren","GLOBAL", 1)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1)
+SetGlobalTimer("FriendshipT","GLOBAL",THREE_DAYS)  
+END
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#ToBPCAuren","GLOBAL", 2)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1)
+SetGlobalTimer("FriendshipT","GLOBAL",THREE_DAYS)  
+END
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#ToBPCAuren","GLOBAL", 3)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1)
+SetGlobalTimer("FriendshipT","GLOBAL",THREE_DAYS)  
+END
+
+IF 
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("K#ToBPCAuren","GLOBAL", 4)
+!GlobalTimerNotExpired("FriendshipT","GLOBAL")
+THEN
+RESPONSE #100
+Interact(Player1)
+SetGlobalTimer("FriendshipT","GLOBAL",THREE_DAYS)  
+END
+
+// Reputation
+
+IF ReputationLT(Player1,3)
+Global("K#Repxcomplain","LOCALS",0)
+THEN
+RESPONSE #100
+StartDialogNoSet(Player1)
+END
+
+// Auren's Quest
+
+// ValinorAttack
+
+IF
+InParty(Myself)
+InParty("Nalia")
+Global("AurenQuest","GLOBAL",0)
+Global("K#TOBBanterO","GLOBAL",4)
+Global("ValinorExist","GLOBAL",0)
+AreaType(OUTDOOR)
+!AreaCheck("AR5200")
+!AreaCheck("AR5201")
+!AreaCheck("AR4500")
+THEN
+RESPONSE #100
+DisplayStringHead(Player1,@1)
+SetGlobal("ValinorExist","GLOBAL",1)
+CreateCreatureObjectOffScreen("VALINOR1",Myself,0,0,0)
+CreateCreatureObjectOffScreen("GRUNT1",Myself,0,0,0)
+CreateCreatureObjectOffScreen("GRUNT2",Myself,0,0,0)
+CreateCreatureObjectOffScreen("GRUNT3",Myself,0,0,0)
+END
+
+// Global Set For When Valinor and Comp Dies
+
+IF
+InParty(Myself)
+InParty("Nalia")
+Global("AurenQuest","GLOBAL",1)
+Global("AriannaSpawn","GLOBAL",0)
+Dead("K#ValiT")
+Dead("K#Grun1")
+Dead("K#Grun2")
+Dead("K#Grun3")
+AreaType(OUTDOOR)
+!AreaCheck("AR5200")
+!AreaCheck("AR5201")
+!AreaCheck("AR4500")
+THEN
+RESPONSE #100
+SetGlobal("AriannaSpawn","GLOBAL",1)
+CreateCreatureObjectDoor("ARIANNA1",Myself,0,0,0)
+END
+
+// Auren Talks to PC
+
+IF
+InParty("K#Auren")
+InParty(Player1)
+!ActuallyInCombat()
+Global("AurenQuest","GLOBAL",2)
+THEN
+RESPONSE #100
+Dialogue(Player1)
+END
+
+
+// Arianna Die
+
+IF
+InParty("K#Auren")
+InParty(Player1)
+InParty("Nalia")
+Global("AurenQuest","GLOBAL",4)
+Global("AriannaDie","GLOBAL",0)
+Dead("K#AriaT")
+THEN
+RESPONSE #100
+SetGlobal("AriannaDie","GLOBAL",1)
+SetGlobal("AurenQuest","GLOBAL",5)
+Dialogue(Player1)
+END
+
+// FateSpirit
+
+IF
+Global("K#AurenSummoned","GLOBAL",1)
+Global("K#AurenHello","GLOBAL",0)
+See(Player1)
+THEN
+RESPONSE #100
+MoveToObject(Player1)
+SetGlobal("K#AurenHello","GLOBAL",1)
+END
+
+// PC Taking too long to help Auren
+
+
+IF
+!GlobalTimerNotExpired("AurenQuestWaiting","GLOBAL")
+InParty(Player1)
+InParty("K#Auren")
+!ActuallyInCombat()
+Global("AurenQuestWaiting","GLOBAL",1)
+Global("AurenQuest", "GLOBAL", 1)
+THEN
+RESPONSE #100
+Interact(Player1)
+END

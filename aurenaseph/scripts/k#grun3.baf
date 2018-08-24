@@ -1,0 +1,16 @@
+IF
+Global("ValinorAttackTalk","GLOBAL",0)
+!See("K#Auren")
+InParty("K#Auren")
+THEN
+RESPONSE #100
+MoveToObject("K#Auren")
+END
+
+IF
+Global("AurenQuest", "GLOBAL", 1)
+THEN
+RESPONSE #100
+Enemy()
+Attack(LastSeenBy())
+END

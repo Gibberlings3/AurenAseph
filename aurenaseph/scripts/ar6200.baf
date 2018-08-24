@@ -1,0 +1,42 @@
+// If Auren Is Not With Nalia
+
+IF
+    Global("StartEndBios","AR6200",1)
+    InParty("K#Auren")
+    Global("K#TOBBanterO","GLOBAL",0)
+    Global("K#AurenBio","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("K#AurenBio","GLOBAL",1)
+        TextScreen("K#AURND")
+        SmallWait(1)
+        Continue()
+END
+
+// If Auren Is With Nalia
+
+IF
+    Global("StartEndBios","AR6200",1)
+    InParty("K#Auren")
+    !Global("K#TOBBanterO","GLOBAL",0)
+    Global("K#AurenBio","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("K#AurenBio","GLOBAL",1)
+        TextScreen("K#AURND1")
+        SmallWait(1)
+        Continue()
+END
+
+IF
+    Global("StartEndBios","AR6200",1)
+    InParty("Nalia")
+    !Global("K#TOBBanterO","GLOBAL",0)
+    Global("K#NaliaBio","GLOBAL",0)
+THEN
+    RESPONSE #100
+        SetGlobal("NaliaBio","GLOBAL",1)
+        TextScreen("k#nalnd1")
+        SmallWait(1)
+        Continue()
+END

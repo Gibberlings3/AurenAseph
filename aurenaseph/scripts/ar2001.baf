@@ -1,0 +1,11 @@
+IF
+        InParty("K#Auren")
+        InParty("Jaheira")
+        !StateCheck("Jaheira",STATE_SLEEPING)
+        Global("Chapter","GLOBAL",5)
+        Global("AurenJaheiraBanter3","AR2001",0)
+THEN
+        RESPONSE #100
+                SetGlobal("AurenJaheiraBanter3","AR2001",1)
+                ActionOverride("K#Auren",Interact("Jaheira"))
+END

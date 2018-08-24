@@ -1,0 +1,8 @@
+IF
+Global("KSPARENExists","AR5200",0)
+Global("AurenQuest", "GLOBAL", 4)
+THEN
+RESPONSE #100
+SetGlobal("KSPARENExists","AR5200",1)
+CreateCreature("KSPAREN",[792.1453],1)
+END

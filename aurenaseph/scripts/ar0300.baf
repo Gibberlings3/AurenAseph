@@ -1,0 +1,11 @@
+IF
+        InParty("K#Auren")
+        InParty("Minsc")
+        !StateCheck("Minsc",STATE_SLEEPING)
+        Global("Chapter","GLOBAL",2)
+        Global("AurenMinscBanter1","AR0300",0)
+THEN
+        RESPONSE #100
+                SetGlobal("AurenMinscBanter1","AR0300",1)
+                ActionOverride("K#Auren",Interact("Minsc"))
+END

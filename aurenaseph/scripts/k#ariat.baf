@@ -1,0 +1,40 @@
+IF
+Global("AriannaTalk","GLOBAL",0)
+See("K#Auren")
+InParty("K#Auren")
+THEN
+RESPONSE #100
+Dialogue("K#Auren")
+END
+
+IF
+Global("AriannaTalk","GLOBAL",0)
+!See("K#Auren")
+InParty("K#Auren")
+THEN
+RESPONSE #100
+MoveToObject("K#Auren")
+END
+
+IF
+Global("AurenQuest","GLOBAL",3)
+See("K#Auren")
+THEN
+RESPONSE #100
+Dialogue("K#Auren")
+END
+
+IF
+Global("AurenQuest","GLOBAL",4)
+THEN
+RESPONSE #100
+Enemy()
+Attack(LastSeenBy())
+END
+
+IF
+Global("PissedOff","GLOBAL",1)
+THEN
+RESPONSE #100
+DestroySelf()
+END

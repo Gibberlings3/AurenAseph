@@ -1,0 +1,10 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneID("K#AriaT")
+CreateVisualEffectObject("SPDIMNDR","K#AriaT")
+Wait(4)
+EndCutSceneMode()
+ActionOverride("K#AriaT",MoveBetweenAreas("AR5200",[784.1446],1))
+END

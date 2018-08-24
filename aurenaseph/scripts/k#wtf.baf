@@ -1,0 +1,11 @@
+IF
+True()
+THEN
+RESPONSE #100
+CutSceneID(Player1)
+ActionOverride("K#Valin",EscapeArea())
+ActionOverride("K#Arian",EscapeArea())
+Wait(4)
+ActionOverride("K#Auren",Dialogue("Nalia"))
+EndCutSceneMode()
+END

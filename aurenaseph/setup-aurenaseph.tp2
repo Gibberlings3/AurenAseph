@@ -1,0 +1,431 @@
+BACKUP ~AurenAseph/backup~
+AUTHOR ~theacefes (theacefes@gibberlings3.net)~
+README ~AurenAseph/Readme-Auren.html~
+
+AUTO_TRA ~AurenAseph\%s~
+
+VERSION v8
+
+LANGUAGE ~English~
+         ~English~
+         ~AurenAseph\English\Setup.tra~
+
+LANGUAGE ~Deutsch~
+         ~German~
+         ~AurenAseph\German\Setup.tra~
+	 
+LANGUAGE ~Russian~
+         ~russian~
+         ~AurenAseph\Russian\Setup.tra~
+
+LANGUAGE ~Francais~
+         ~french~
+         ~AurenAseph\French\Setup.tra~
+
+BEGIN @0
+
+// adds ToB actions/triggers to SoA
+
+// adding all ToB actions to action.ids unless already present
+APPEND ~ACTION.IDS~ ~31 SpellRES(S:RES*,O:Target*)~
+             UNLESS ~31 SpellRES(S:RES\*,O:Target\*)~
+APPEND ~ACTION.IDS~ ~95 SpellPointRES(S:RES*,P:Target*)~
+             UNLESS ~95 SpellPointRES(S:RES\*,P:Target\*)~
+APPEND ~ACTION.IDS~ ~113 ForceSpellRES(S:RES*,O:Target)~
+             UNLESS ~113 ForceSpellRES(S:RES\*,O:Target)~
+APPEND ~ACTION.IDS~ ~114 ForceSpellPointRES(S:RES*,P:Target)~
+             UNLESS ~114 ForceSpellPointRES(S:RES\*,P:Target)~
+APPEND ~ACTION.IDS~ ~147 RemoveSpellRES(S:Spell*)~
+             UNLESS ~147 RemoveSpellRES(S:Spell\*)~
+APPEND ~ACTION.IDS~ ~160 ApplySpellRES(S:RES*,O:Target)~
+             UNLESS ~160 ApplySpellRES(S:RES\*,O:Target)~
+APPEND ~ACTION.IDS~ ~181 ReallyForceSpellRES(S:RES*,O:Target)~
+             UNLESS ~181 ReallyForceSpellRES(S:RES\*,O:Target)~
+APPEND ~ACTION.IDS~ ~191 SpellNoDecRES(S:RES*,O:Target*)~
+             UNLESS ~191 SpellNoDecRES(S:RES\*,O:Target\*)~
+APPEND ~ACTION.IDS~ ~192 SpellPointNoDecRES(S:RES*,P:Target*)~
+             UNLESS ~192 SpellPointNoDecRES(S:RES\*,P:Target\*)~
+APPEND ~ACTION.IDS~ ~240 ReallyForceSpellDeadRES(S:RES*,O:Target)~
+             UNLESS ~240 ReallyForceSpellDeadRES(S:RES\*,O:Target)~
+APPEND ~ACTION.IDS~ ~318 ForceSpellRangeRES(S:RES*,O:Target)~
+             UNLESS ~318 ForceSpellRangeRES(S:RES\*,O:Target)~
+APPEND ~ACTION.IDS~ ~319 ForceSpellPointRangeRES(S:RES*,P:Target)~
+             UNLESS ~319 ForceSpellPointRangeRES(S:RES\*,P:Target)~
+APPEND ~ACTION.IDS~ ~337 ReallyForceSpellPointRES(S:RES*,P:Target*)~
+             UNLESS ~337 ReallyForceSpellPointRES(S:RES\*,P:Target\*)~
+COPY_EXISTING ~action.ids~ ~override~
+  REPLACE_TEXTUALLY ~^106 Shout(.*$~ ~106 Shout(I:ID*SHOUTIDS)~
+  BUT_ONLY_IF_IT_CHANGES
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~shoutids.ids~ THEN BEGIN
+  COPY ~AurenAseph/shoutids.ids~ ~override~
+END
+             
+// additional ToB triggers for SoA
+APPEND ~TRIGGER.IDS~ ~0x00A1 SpellCastOnMeRES(S:Spell*,O:Caster*)~
+              UNLESS ~0x00A1 SpellCastOnMeRES(S:Spell\*,O:Caster\*)~
+APPEND ~TRIGGER.IDS~ ~0x0091 SpellCastRES(S:Spell*,O:Object*)~
+              UNLESS ~0x0091 SpellCastRES(S:Spell\*,O:Object\*)~
+APPEND ~TRIGGER.IDS~ ~0x00A6 SpellCastPriestRES(S:Spell*,O:Object*)~
+              UNLESS ~0x00A6 SpellCastPriestRES(S:Spell\*,O:Object\*)~
+APPEND ~TRIGGER.IDS~ ~0x00A7 SpellCastInnateRES(S:Spell*,O:Object*)~
+              UNLESS ~0x00A7 SpellCastInnateRES(S:Spell\*,O:Object\*)~
+APPEND ~TRIGGER.IDS~ ~0x4031 HaveSpellRES(S:Spell*)~
+              UNLESS ~0x4031 HaveSpellRES(S:Spell\*)~
+APPEND ~TRIGGER.IDS~ ~0x40D5 ActuallyInCombat()~
+              UNLESS ~0x40D5 ActuallyInCombat()~
+COPY_EXISTING ~trigger.ids~ ~override~
+  REPLACE_TEXTUALLY ~\bHeard(O:Object\*,I:ID\*)~
+                    ~Heard(O:Object*,I:ID*SHOUTIDS)~
+  BUT_ONLY_IF_IT_CHANGES
+
+// force WeiDU to reload altered IDS files
+CLEAR_IDS_MAP
+
+//Adding CRE files
+
+COPY ~AurenAseph/CREs/AUREN.cre~ ~override/AUREN.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY MORALE @2 
+SAY HAPPY @3 
+SAY UNHAPPY_ANNOYED @4 
+SAY UNHAPPY_SERIOUS @5 
+SAY UNHAPPY_BREAKING_POINT @6 
+SAY LEADER @7 
+SAY TIRED @8 
+SAY BORED @9 
+SAY BATTLE_CRY1 @10 
+SAY BATTLE_CRY2 @11 
+SAY BATTLE_CRY3 @12 
+SAY BATTLE_CRY4 @13 
+SAY DAMAGE @14 
+SAY DYING @15 
+SAY HURT @16 
+SAY AREA_FOREST @17 
+SAY AREA_CITY @18 
+SAY AREA_DUNGEON @19 
+SAY AREA_DAY @20 
+SAY AREA_NIGHT @21 
+SAY SELECT_COMMON1 @22 
+SAY SELECT_COMMON2 @23 
+SAY SELECT_COMMON3 @24 
+SAY SELECT_COMMON4 @25 
+SAY SELECT_COMMON5 @26 
+SAY SELECT_COMMON6 @27 
+SAY SELECT_ACTION1 @28 
+SAY SELECT_ACTION2 @29  
+SAY SELECT_ACTION3 @30 
+SAY SELECT_ACTION4 @31 
+SAY SELECT_ACTION5 @32 
+SAY SELECT_ACTION6 @33 
+SAY SELECT_ACTION7 @34 
+SAY SELECT_RARE1 @35 
+SAY SELECT_RARE2 @36 
+SAY CRITICAL_HIT @37 
+SAY CRITICAL_MISS @38 
+SAY TARGET_IMMUNE @39 
+SAY INVENTORY_FULL @40 
+SAY BIO @41
+
+
+
+
+// Other CREs
+
+COPY ~AurenAseph/CREs/VALINOR.cre~ ~override/VALINOR.cre~
+SAY NAME1 @42
+SAY NAME2 @42
+
+COPY ~AurenAseph/CREs/ARIANNA.cre~ ~override/ARIANNA.cre~
+SAY NAME1 @43
+SAY NAME2 @43
+
+// Adds Dialogue Files
+
+COMPILE ~AurenAseph/Dialogues/K#Auren.d~
+COMPILE ~AurenAseph/Dialogues/K#AurenB.d~
+COMPILE ~AurenAseph/Dialogues/K#AurenJ.d~
+COMPILE ~AurenAseph/Dialogues/K#Valin.d~
+
+// Adds Items
+
+COPY ~AurenAseph/Items/aurnsw.itm~ ~override~
+ SAY NAME1 @44 
+ SAY NAME2 @45 
+ SAY UNIDENTIFIED_DESC @46 
+ SAY DESC @47
+
+// Adds Scripts
+
+COMPILE ~AurenAseph/Scripts/K#Auren.baf~ USING ~AurenAseph/%s/scripts.tra~
+COMPILE ~AurenAseph/Scripts/K#Valin.baf~
+COMPILE ~AurenAseph/Scripts/K#Arian.baf~
+EXTEND_BOTTOM ~Ar0406.bcs~ ~AurenAseph/Scripts/ar0406.baf~
+EXTEND_BOTTOM ~Ar0300.bcs~ ~AurenAseph/Scripts/ar0300.baf~
+EXTEND_BOTTOM ~Ar0509.bcs~ ~AurenAseph/Scripts/ar0509.baf~
+EXTEND_BOTTOM ~Ar0701.bcs~ ~AurenAseph/Scripts/ar0701.baf~
+EXTEND_BOTTOM ~Ar1000.bcs~ ~AurenAseph/Scripts/ar1000.baf~
+EXTEND_BOTTOM ~Ar1100.bcs~ ~AurenAseph/Scripts/ar1100.baf~
+EXTEND_BOTTOM ~Ar2001.bcs~ ~AurenAseph/Scripts/ar2001.baf~
+EXTEND_BOTTOM ~Ar2007.bcs~ ~AurenAseph/Scripts/ar2007.baf~
+EXTEND_BOTTOM ~Ar0900.bcs~ ~AurenAseph/Scripts/ar0900.baf~
+EXTEND_BOTTOM ~Ar1600.bcs~ ~AurenAseph/Scripts/ar1600.baf~
+EXTEND_BOTTOM ~Ar2010.bcs~ ~AurenAseph/Scripts/ar2010.baf~
+EXTEND_BOTTOM ~Ar1900.bcs~ ~AurenAseph/Scripts/ar1900.baf~
+EXTEND_BOTTOM ~Ar1202.bcs~ ~AurenAseph/Scripts/ar1202.baf~
+EXTEND_BOTTOM ~Ar0903.bcs~ ~AurenAseph/Scripts/ar0903.baf~
+EXTEND_BOTTOM ~Ar2600.bcs~ ~AurenAseph/Scripts/ar2600.baf~
+EXTEND_BOTTOM ~Ar0302.bcs~ ~AurenAseph/Scripts/ar0302.baf~
+EXTEND_BOTTOM ~Ar0404.bcs~ ~AurenAseph/Scripts/ar0404.baf~
+EXTEND_BOTTOM ~Ar0413.bcs~ ~AurenAseph/Scripts/ar0413.baf~
+EXTEND_BOTTOM ~Ar2812.bcs~ ~AurenAseph/Scripts/ar2812.baf~
+EXTEND_BOTTOM ~Ar2200.bcs~ ~AurenAseph/Scripts/ar2200.baf~
+COMPILE ~AurenAseph/Scripts/K#WTF.baf~
+
+
+
+
+
+
+
+ACTION_IF FILE_EXISTS_IN_GAME ~mel01.cre~ THEN BEGIN
+
+COPY ~AurenAseph/CREs/AUREN1.cre~ ~override/AUREN1.cre~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY MORALE @2 
+SAY HAPPY @3 
+SAY UNHAPPY_ANNOYED @4 
+SAY UNHAPPY_SERIOUS @5 
+SAY UNHAPPY_BREAKING_POINT @6 
+SAY LEADER @7 
+SAY TIRED @8 
+SAY BORED @9 
+SAY BATTLE_CRY1 @10 
+SAY BATTLE_CRY2 @11 
+SAY BATTLE_CRY3 @12 
+SAY BATTLE_CRY4 @13 
+SAY DAMAGE @14 
+SAY DYING @15 
+SAY HURT @16 
+SAY AREA_FOREST @17 
+SAY AREA_CITY @18 
+SAY AREA_DUNGEON @19 
+SAY AREA_DAY @20 
+SAY AREA_NIGHT @21 
+SAY SELECT_COMMON1 @22 
+SAY SELECT_COMMON2 @23 
+SAY SELECT_COMMON3 @24 
+SAY SELECT_COMMON4 @25 
+SAY SELECT_COMMON5 @26 
+SAY SELECT_COMMON6 @27 
+SAY SELECT_ACTION1 @28 
+SAY SELECT_ACTION2 @29 
+SAY SELECT_ACTION3 @30 
+SAY SELECT_ACTION4 @31 
+SAY SELECT_ACTION5 @32 
+SAY SELECT_ACTION6 @33 
+SAY SELECT_ACTION7 @34 
+SAY SELECT_RARE1 @35 
+SAY SELECT_RARE2 @36 
+SAY CRITICAL_HIT @37 
+SAY CRITICAL_MISS @38 
+SAY TARGET_IMMUNE @39 
+SAY INVENTORY_FULL @40 
+SAY BIO @41
+
+COPY ~AurenAseph/CREs/VALINOR1.cre~ ~override/VALINOR1.cre~
+SAY NAME1 @42
+SAY NAME2 @42
+SAY BATTLE_CRY1 @87
+SAY BATTLE_CRY2 @88
+SAY BATTLE_CRY3 @89
+SAY DAMAGE @90
+SAY DYING @91
+SAY HURT ~~
+
+COPY ~AurenAseph/CREs/ARIANNA1.cre~ ~override/ARIANNA1.cre~
+SAY NAME1 @43
+SAY NAME2 @43
+SAY BATTLE_CRY1 @93
+SAY BATTLE_CRY3 @94
+SAY DAMAGE @95
+SAY DYING ~~
+SAY HURT ~~
+
+COPY ~AurenAseph/CREs/GRUNT1.cre~ ~override/GRUNT1.cre~
+SAY NAME1 @96
+SAY NAME2 @96
+SAY BATTLE_CRY1 ~~ [K#AurXG1]
+SAY BATTLE_CRY2 ~~ [K#AurXG2]
+SAY HURT ~~
+SAY DYING ~~
+SAY DAMAGE ~~
+
+COPY ~AurenAseph/CREs/GRUNT2.cre~ ~override/GRUNT2.cre~
+SAY NAME1 @96
+SAY NAME2 @96
+SAY BATTLE_CRY1 ~~ [K#AurXG3]
+SAY BATTLE_CRY2 ~~ [K#AurXG4]
+SAY HURT ~~
+SAY DYING ~~
+SAY DAMAGE ~~
+
+COPY ~AurenAseph/CREs/GRUNT3.cre~ ~override/GRUNT3.cre~
+SAY NAME1 @96
+SAY NAME2 @96
+SAY BATTLE_CRY1 ~~ [K#AurXG5]
+SAY BATTLE_CRY2 ~~ [K#AurXG6]
+SAY HURT ~~
+SAY DYING ~~
+SAY DAMAGE ~~
+
+COMPILE ~AurenAseph/Dialogues/K#Aur25P.d~
+COMPILE ~AurenAseph/Dialogues/K#Aur25B.d~
+COMPILE ~AurenAseph/Dialogues/K#Aur25J.d~
+COMPILE ~AurenAseph/Dialogues/K#ValiT.d~
+COMPILE ~AurenAseph/Dialogues/K#AriaT.d~
+COMPILE ~AurenAseph/Dialogues/FATESP.d~
+COMPILE ~AurenAseph/Dialogues/K#Aur25D.d~
+COMPILE ~AurenAseph/Dialogues/K#AQ.d~
+
+COPY ~AurenAseph/Items/aurnsw.itm~ ~override~
+ SAY NAME1 @44
+ SAY NAME2 @45 
+ SAY UNIDENTIFIED_DESC @46 
+ SAY DESC @47
+
+COPY ~AurenAseph/2DAs/BlankEpilogue.2da~ ~override/K#AURND.2da~
+        REPLACE_TEXTUALLY ~PORTRAIT~ ~AURENL~ // Their biggest portrait file
+        REPLACE 99999 @103  // The actual epilogue writing itself
+
+COPY ~AurenAseph/2DAs/BlankEpilogue.2da~ ~override/K#AURND1.2da~
+        REPLACE_TEXTUALLY ~PORTRAIT~ ~AURENL~ // Their biggest portrait file
+        REPLACE 99999 @104  // The actual epilogue writing itself
+
+COPY ~AurenAseph/2DAs/BlankEpilogue.2da~ ~override/k#nalnd1.2da~
+        REPLACE_TEXTUALLY ~PORTRAIT~ ~NNALIAL~
+        REPLACE 99999 @105  // The actual epilogue writing itself
+
+
+ COPY_EXISTING ~ar6200.bcs~ ~override/ar6200.bcs~
+        DECOMPILE_BCS_TO_BAF
+        REPLACE_TEXTUALLY ~Global("NaliaBio","GLOBAL",0)~ ~Global("K#ToBBanterO","GLOBAL",0)
+  Global("NaliaBio","GLOBAL",0)~
+        COMPILE_BAF_TO_BCS
+
+COMPILE ~AurenAseph/Scripts/K#Aure25.baf~ USING ~AurenAseph/%s/scripts.tra~
+COMPILE ~AurenAseph/Scripts/K#ValiT.baf~
+COMPILE ~AurenAseph/Scripts/K#AriaT.baf~
+COMPILE ~AurenAseph/Scripts/K#Nalia.baf~
+COMPILE ~AurenAseph/Scripts/K#Grun1.baf~
+COMPILE ~AurenAseph/Scripts/K#Grun2.baf~
+COMPILE ~AurenAseph/Scripts/K#Grun3.baf~
+EXTEND_TOP ~ar6200.bcs~ ~AurenAseph/Scripts/AR6200.baf~
+
+END
+
+// Adds Sounds
+
+COPY ~AurenAseph/audio/K#blank.mus~ ~music~
+COPY_EXISTING ~songlist.2da~ ~override~
+SET_2DA_ENTRY 0 2 3 ~K#BLANK.MUS~
+
+LAF HANDLE_AUDIO STR_VAR audio_path = ~aurenaseph/audio~ oggdec_path = ~aurenaseph/audio~ sox_path = ~aurenaseph/audio~ END // this replaces all the junk below
+ACTION_FOR_EACH ext IN ogg wav BEGIN 
+  ACTION_IF FILE_EXISTS ~override/k#aurepand.%ext%~   THEN BEGIN MOVE ~override/k#aurepand.%ext%~   ~override/k#aurep&.%ext%~ END
+  ACTION_IF FILE_EXISTS ~override/k#aurepcaret.%ext%~ THEN BEGIN MOVE ~override/k#aurepcaret.%ext%~ ~override/k#aurep^.%ext%~ END
+END
+/*
+ACTION_IF ("%WEIDU_OS%" STRING_COMPARE_CASE ~WIN32~ = 0) THEN BEGIN // if Windows
+  COPY         ~AurenAseph/audio~ ~override~
+  AT_NOW ~AurenAseph/BatchFiles/aurenaudio.bat~
+  AT_INTERACTIVE_UNINSTALL ~AurenAseph/BatchFiles/aurenaudiouninstall.bat~
+END ELSE BEGIN // if OS X or Linux
+  COPY   ~AurenAseph/audio~ ~override~ 
+  AT_NOW ~sh AurenAseph/BatchFiles/aurenaudio.sh~
+  AT_UNINSTALL ~sh AurenAseph/BatchFiles/aurenaudiouninstall.sh~
+END
+*/
+
+// .2da appending, SoA style
+APPEND ~pdialog.2da~
+~K#Auren K#AurenP K#AurenJ K#AurenD~
+UNLESS ~K#Auren~
+UNLESS ~25POST~
+
+APPEND ~interdia.2da~
+~K#Auren K#AurenB~
+UNLESS ~K#Auren~
+UNLESS ~25FILE~
+
+// .2da appending, ToB style
+APPEND ~pdialog.2da~
+~K#Auren K#AurenP K#AurenJ K#AurenD K#Aur25P K#Aur25J K#Aur25D K#Aure25~
+UNLESS ~K#Auren~
+IF ~25POST~
+
+APPEND ~interdia.2da~
+~K#Auren K#AurenB K#Aur25B~
+UNLESS ~K#Auren~
+IF ~25FILE~
+
+// Adds Portraits
+     
+ACTION_IF GAME_IS BG2EE THEN BEGIN
+
+  COPY ~AurenAseph/portraits/aurens_ee.bmp~ ~override/aurens.bmp~
+       ~AurenAseph/portraits/aurenm_ee.bmp~ ~override/aurenm.bmp~
+       ~AurenAseph/portraits/aurenl.bmp~    ~override/aurenl.bmp~
+
+END ELSE BEGIN
+
+  COPY ~AurenAseph/portraits/aurens.bmp~ ~override/aurens.bmp~
+       ~AurenAseph/portraits/aurenm.bmp~ ~override/aurenm.bmp~
+       ~AurenAseph/portraits/aurenl.bmp~ ~override/aurenl.bmp~
+
+END
+
+BEGIN @106
+SUBCOMPONENT @107
+REQUIRE_COMPONENT ~AurenAseph/Setup-AurenAseph.tp2~ ~0~ @108
+     
+ACTION_IF GAME_IS BG2EE THEN BEGIN
+
+  COPY ~AurenAseph/portraits/aurens_alt1_ee.bmp~ ~override/aurens.bmp~
+       ~AurenAseph/portraits/aurenm_alt1_ee.bmp~ ~override/aurenm.bmp~
+       ~AurenAseph/portraits/aurenl_alt1_ee.bmp~ ~override/aurenl.bmp~
+
+END ELSE BEGIN
+
+  COPY ~AurenAseph/portraits/aurens_alt1.bmp~ ~override/aurens.bmp~
+       ~AurenAseph/portraits/aurenm_alt1.bmp~ ~override/aurenm.bmp~
+       ~AurenAseph/portraits/aurenl_alt1.bmp~ ~override/aurenl.bmp~
+
+END
+
+BEGIN @109
+SUBCOMPONENT @107
+REQUIRE_COMPONENT ~AurenAseph/Setup-AurenAseph.tp2~ ~0~ @108
+
+ACTION_IF GAME_IS BG2EE THEN BEGIN
+
+  COPY ~AurenAseph/portraits/aurens_alt2_ee.bmp~ ~override/aurens.bmp~
+       ~AurenAseph/portraits/aurenm_alt2_ee.bmp~ ~override/aurenm.bmp~
+       ~AurenAseph/portraits/aurenl_alt2.bmp~    ~override/aurenl.bmp~
+
+END ELSE BEGIN
+
+  COPY ~AurenAseph/portraits/aurens_alt2.bmp~ ~override/aurens.bmp~
+       ~AurenAseph/portraits/aurenm_alt2.bmp~ ~override/aurenm.bmp~
+       ~AurenAseph/portraits/aurenl_alt2.bmp~ ~override/aurenl.bmp~
+
+END
+
+
+
+//END
+
+
+
