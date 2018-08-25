@@ -2,7 +2,7 @@ IF
         InParty("K#Auren")
         InParty("Aerie")
         !StateCheck("Aerie",STATE_SLEEPING)        
-        Global("Chapter","GLOBAL",4)
+        Global("Chapter","GLOBAL",%bg2_chapter_4%)
         Global("AurenAerieBanter2","AR1600",0)
 THEN
         RESPONSE #100

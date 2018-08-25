@@ -527,7 +527,7 @@ EXIT
 
 CHAIN
 IF ~IsGabber(Player1)
-!Global("Chapter","GLOBAL",5)
+!Global("Chapter","GLOBAL",%bg2_chapter_5%)
 !ActuallyInCombat() 
 Global("K#Friendship", "GLOBAL", 2)~ THEN K#AurenJ Talk1
 @79
@@ -667,7 +667,7 @@ EXIT
 
 CHAIN
 IF ~IsGabber(Player1)
-!Global("Chapter","GLOBAL",5)
+!Global("Chapter","GLOBAL",%bg2_chapter_5%)
 !ActuallyInCombat() 
 Global("K#Friendship", "GLOBAL", 5)~ THEN K#AurenJ Talk2
 @79
@@ -863,7 +863,7 @@ EXIT
 
 CHAIN
 IF ~IsGabber(Player1)
-!Global("Chapter","GLOBAL",5)
+!Global("Chapter","GLOBAL",%bg2_chapter_5%)
 !ActuallyInCombat() 
 Global("K#Friendship", "GLOBAL", 6)~ THEN K#AurenJ Talk3
 @79

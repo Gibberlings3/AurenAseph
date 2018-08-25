@@ -3,8 +3,7 @@ BEGIN K#Auren
 IF ~NumTimesTalkedTo(0)~ THEN BEGIN FirstMeeting
 SAY @0 
 
-
-IF ~GlobalLT("Chapter","GLOBAL",3)~ THEN REPLY @1 GOTO InquireIrenicus
+IF ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_3%)~ THEN REPLY @1 GOTO InquireIrenicus
 IF ~~ THEN REPLY @2 GOTO Greet
 IF ~Class(Player1,FIGHTER)~ THEN REPLY @3 GOTO BothFighters
 IF ~~ THEN REPLY @4 GOTO GoAway
