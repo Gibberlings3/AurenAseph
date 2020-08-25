@@ -4,7 +4,7 @@ README ~AurenAseph/Readme-Auren.html~
 
 AUTO_TRA ~AurenAseph\%s~
 
-VERSION v10
+VERSION ~v11~
 
 ALWAYS
 
@@ -307,24 +307,6 @@ COMPILE ~AurenAseph/Dialogues/K#AriaT.d~
 COMPILE ~AurenAseph/Dialogues/K#Aur25D.d~
 COMPILE ~AurenAseph/Dialogues/K#AQ.d~
 
-ACTION_IF GAME_IS ~eet~ BEGIN
-  INCLUDE ~EET/other/EET_functions.tph~
-  LAF ~EET_NPC_TRANSITION~
-    INT_VAR
-      type = 2
-    STR_VAR
-      dv = "K#AUREN"
-      override_SoA = "K#AUREN"
-      override_ToB = "K#AURE25"
-      dialog_ToB = "K#AUR25D"
-      traFile = EVAL "AurenAseph/%LANGUAGE%/fatesp.tra"
-      string = "@0" //Bring me Auren, the human fighter.
-      stringPosDV = "Anomen"
-  END
-END ELSE BEGIN
-  COMPILE ~AurenAseph/Dialogues/FATESP.d~ // AUTO_TRA will load fatesp.tra
-END
-
 COPY ~AurenAseph/Items/aurnsw.itm~ ~override~
  SAY NAME1 @44
  SAY NAME2 @45 
@@ -358,6 +340,24 @@ COMPILE ~AurenAseph/Scripts/K#Grun1.baf~
 COMPILE ~AurenAseph/Scripts/K#Grun2.baf~
 COMPILE ~AurenAseph/Scripts/K#Grun3.baf~
 EXTEND_TOP ~ar6200.bcs~ ~AurenAseph/Scripts/AR6200.baf~
+
+ACTION_IF GAME_IS ~eet~ BEGIN
+  INCLUDE ~EET/other/EET_functions.tph~
+  LAF ~EET_NPC_TRANSITION~
+    INT_VAR
+      type = 2
+    STR_VAR
+      dv = "K#AUREN"
+      override_SoA = "K#AUREN"
+      override_ToB = "K#AURE25"
+      dialog_ToB = "K#AUR25D"
+      traFile = EVAL "AurenAseph/%LANGUAGE%/fatesp.tra"
+      string = "@0" //Bring me Auren, the human fighter.
+      stringPosDV = "Anomen"
+  END
+END ELSE BEGIN
+  COMPILE ~AurenAseph/Dialogues/FATESP.d~ // AUTO_TRA will load fatesp.tra
+END
 
 END
 
