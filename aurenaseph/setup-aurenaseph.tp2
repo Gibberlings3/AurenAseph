@@ -20,9 +20,9 @@ ALWAYS
     OUTER_SET EVAL ~%name_source%~ = bg2_chapter
   END
   
-  ACTION_DEFINE_ARRAY tra#reload BEGIN setup END
-  ACTION_DEFINE_ARRAY tra#noconvert BEGIN END
-  LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~aurenaseph~ noconvert_array = tra#noconvert reload_array = tra#reload iconv_path = ~aurenaseph/iconv~ END
+  ACTION_DEFINE_ARRAY tra#reload BEGIN END
+  ACTION_DEFINE_ARRAY tra#noconvert BEGIN setup END
+  LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 from_utf8 = 1 STR_VAR tra_path = ~aurenaseph~ noconvert_array = tra#noconvert reload_array = tra#reload iconv_path = ~aurenaseph/iconv~ END
 END
 
 LANGUAGE ~English~
@@ -44,6 +44,10 @@ LANGUAGE ~Francais~
 LANGUAGE ~Spanish~
          ~spanish~
          ~AurenAseph\spanish\Setup.tra~
+
+LANGUAGE ~Simplified Chinese (by anca_qin)~
+         ~Schinese~
+         ~AurenAseph\Schinese\setup.tra~
 
 BEGIN @0
 LABEL ~AurenAseph-main~
