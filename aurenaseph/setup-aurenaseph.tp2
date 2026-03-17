@@ -1,9 +1,9 @@
-BACKUP ~AurenAseph/backup~
+BACKUP ~weidu_external/aurenaseph/backup~
 //AUTHOR ~theacefes (theacefes@gibberlings3.net)~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/113-auren-aseph/~
-README ~AurenAseph/Readme-Auren.html~
+README ~aurenaseph/readme-auren.html~
 
-AUTO_TRA ~AurenAseph\%s~
+AUTO_TRA ~aurenaseph\%s~
 
 VERSION ~v12~
 
